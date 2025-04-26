@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numero1 = Number(prompt('Digite um número: '))
+        let numero2 = Number(prompt('Digite outro número: '))
+
+        if (numero1 > 0 && numero2 > 0){
+            console.log('Os dos números são positivo');
+        } else if((numero1 > 0 && numero2 <= 0) || (numero2 > 0 && numero1 <= 0)){
+            console.log('Um dos números é positivo');
+        } else{
+            console.log('Os dos números são negativo');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova JSIA - Condicionais</title>
+</head>
+<body>
+    <h1>Prova JSIA - Condicionais</h1>
+    <script>
+        // Solicita os dados do usuário
+        let idadeUsuario = Number(prompt('Qual é a sua idade? '))
+
+        // Verifica se é maior de idade usando operador ternário
+        let status = (idadeUsuario >= 18) ? 'Maior de idade' : 'Menor de idade';
+        console.log(`Você é "${status}"`);
+          
+        
+        // Solicita os dados do usuário
+        let statusRegistro = prompt('Você está registrado? (registrado ou não registrado): ')
+    
+        
+        // Switch para tratar o status
+        switch (statusRegistro.toLowerCase()) {
+            case 'registrado':
+                console.log('Bem-vindo, usuário registrado!');
+                break;
+            case 'não registrado':
+                console.log('Por favor, complete seu registro.');
+                break;
+            default:
+                console.log('Status desconhecido');
+                break;
+        }
+
+        // Verifica a condição com operadores lógicos
+        if (idadeUsuario >= 18 && statusRegistro.toLowerCase() === 'registrado'){
+            console.log('Acesso completo concedido.');
+        } else {
+            console.log('Acesso limitado');
+            
+        }
+    </script>
+</body>
+</html>
