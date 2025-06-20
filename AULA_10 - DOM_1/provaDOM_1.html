@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova DOM 1</title>
+    <style>
+        .concluida {
+            text-decoration: line-through;
+            color: gray;
+        }
+        button {
+            margin-left: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Prova Manipulação de DOM 1</h1>
+
+    <h2>Gerenciador de Tarefas</h2>
+
+    <input type="text" name="tarefa" id="inputTarefa" placeholder="Digite sua tarefa:">
+
+    <p id="mensagem"></p>
+
+    <button  id="btn_adicionar" onclick="adicionarTarefa()" type="button">Adicionar Tarefa</button>
+
+    <ol id="listaTarefas" ></ol>
+
+    
+    
+    <script>
+        let inputTarefa = document.getElementById('inputTarefa')
+        let btn_adicionar = document.getElementById('btn_adicionar')
+        let listaTarefas = document.getElementById('listaTarefas')
+
+        btnAdicionar.addEventListener('click', adicionarTarefa);
+      
+        function adicionarTarefa(){
+            
+            let textoInput = inputTarefa.value
+
+            if (textoInput === ''){
+                let mensagem = document.getElementById('mensagem').textContent = 'Digite uma tarefa!';
+                return;
+            }
+
+            let criando_li = document.createElement('li')
+            criando_li.textContent = textoInput;
+
+
+            // Marcar como concluída
+            criando_li.addEventListener('click', function() {
+               criando_li.classList.toggle('concluida');
+            });
+
+            // Botão remover
+            let botao = document.createElement("button");
+            botao.textContent = "Remover";
+            botao.onclick = function() {
+                criando_li.remove();
+            }
+
+            criando_li.appendChild(botao);
+            document.getElementById("listaTarefas").appendChild(criando_li);
+
+            inputTarefa.value = ""
+        }
+        
+
+        
+
+    </script>
+</body>
+</html>
