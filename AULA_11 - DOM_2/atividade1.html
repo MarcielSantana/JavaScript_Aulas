@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Atividade 1 - Aula 11 - DOM</h1>
+
+    <button id="meuBotao">Botão</button>
+
+    <script>
+        let botao = document.getElementById("meuBotao")
+
+        // botao.addEventListener('click', () =>{
+        //    document.writeln('Botão clicado')
+        // })
+
+        let paragrafo = document.createElement('p')
+        paragrafo.textContent = 'Este é um novo paragrafo'
+
+        document.body.appendChild(paragrafo)
+    </script>
+
+
+    
+</body>
+</html>

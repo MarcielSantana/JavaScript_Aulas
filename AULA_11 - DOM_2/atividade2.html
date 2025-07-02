@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ATIVIDADE 2 - AULA 2 SOBRE DOM</h1>
+
+    <ul id="listaIndefinida">
+
+    </ul>
+
+    <label for="inputTarefa"></label>
+    <input type="text" name="inputTarefa" id="inputTarefa">
+
+    <button id="botaoAdicionar">Botão adicionar</button>
+
+    <script>
+        let lista = document.getElementById('listaIndefinida')
+
+        let botao = document.getElementById('botaoAdicionar')
+
+        
+        botao.addEventListener('click', () => {
+            let inputUsuario = document.getElementById('inputTarefa')
+    
+            let itensLista = document.createElement('li')
+            
+            itensLista.innerText = inputUsuario.value
+            lista.appendChild(itensLista)
+            
+            inputUsuario.value = ""
+        })
+    </script>
+    
+</body>
+</html>

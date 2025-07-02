@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ATIVIDADE 3 - AULA 2 DE DOM</h1>
+
+    <div id="tarefasCadastradas">
+
+    </div>
+
+    <label for="inputNomeTarefa"></label>
+    <input type="text" name="inputNomeTarefa" id="inputNomeTarefa">
+
+    <label for="descricaoTarefa"></label>
+    <textarea name="descricaoTarefa" id="descricaoTarefa"></textarea>
+
+    <button id="botaoAdicionarTarefa">Adicionar Tarefa</button>
+
+    <script>
+        let inputNomeTarefa = document.getElementById('inputNomeTarefa')
+
+        let areaDescricaoTarefa = document.getElementById('descricaoTarefa')
+
+        let botaoAdicionar = document.getElementById('botaoAdicionarTarefa')
+
+        
+        botaoAdicionar.addEventListener('click', () => {
+            let criaDiv = document.createElement('div')
+            let titulo = document.createElement('h3')
+            let criaParagrafo = document.createElement('p')
+            
+            titulo.textContent = inputNomeTarefa.value
+            criaParagrafo.textContent = areaDescricaoTarefa.value
+            
+            // o método append() adiciona mais de 1 item ao mesmo tempo
+            criaDiv.append(titulo, criaParagrafo)
+            
+            let cardTarefas = document.getElementById('tarefasCadastradas')
+            // o método appendChild() só aceita 1 por vez
+            cardTarefas.appendChild(criaDiv)
+
+            inputNomeTarefa.value = ""
+            areaDescricaoTarefa.value = ""
+        })
+    </script>
+</body>
+</html>
