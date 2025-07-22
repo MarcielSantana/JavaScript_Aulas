@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="inputNome"></label>
+    <input type="text" name="inputNome" id="inputNome">
+
+    <button id="btnEnviar">Enviar</button>
+
+    <p id="pSaida"></p>
+
+    <script>
+        let btnEnviar = document.getElementById('btnEnviar')
+        let inputNome = document.getElementById('inputNome')
+        const pSaida = document.getElementById("pSaida")
+
+        btnEnviar.addEventListener('click', () => {
+            let nome = localStorage.setItem('nome', inputNome.value)
+
+        })
+
+        pSaida.textContent = localStorage.getItem('nome')
+
+    </script>
+    
+</body>
+</html>
