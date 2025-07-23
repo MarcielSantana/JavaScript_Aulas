@@ -1,0 +1,23 @@
+{
+  "name": "javascript_aulas",
+  "version": "1.0.0",
+  "description": "Este repositório contém os exercícios, práticas e desafios realizados durante meus estudos de **JavaScript** nos cursos de **Desenvolvimento Web Full Stack** pela [Trybe](https://www.betrybe.com/) e pela [Infinity School](https://infinityschool.com.br/).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcielSantana/JavaScript_Aulas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarcielSantana/JavaScript_Aulas/issues"
+  },
+  "homepage": "https://github.com/MarcielSantana/JavaScript_Aulas#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro de Usuário</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    .campo { margin-bottom: 15px; }
+    .erro { color: red; font-size: 0.9em; }
+    .sucesso { color: green; font-weight: bold; }
+  </style>
+  <script src="prova_tratamento_erros.js" defer></script>
+</head>
+<body>
+  <h1>AULA 13 - Prova Tratamento de Erros e Modularização</h1>
+
+  <form id="formularioCadastro">
+    <div class="campo">
+      <label for="inputNome">Nome: </label><br>
+      <input type="text" id="inputNome" />
+      <div id="erroNome" class="erro"></div>
+    </div>
+
+    <div class="campo">
+      <label for="inputUsuario">Usuário: </label><br>
+      <input type="text" id="inputUsuario" />
+      <div id="erroUsuario" class="erro"></div>
+    </div>
+
+    <div class="campo">
+      <label for="inputSenha">Senha: </label><br>
+      <input type="password" id="inputSenha" />
+      <div id="erroSenha" class="erro"></div>
+    </div>
+
+    <div class="campo">
+      <label for="inputEmail">Email: </label><br>
+      <input type="email" id="inputEmail" />
+      <div id="erroEmail" class="erro"></div>
+    </div>
+
+    <div class="campo">
+      <label for="inputIdade">Idade: </label><br>
+      <input type="number" id="inputIdade" />
+      <div id="erroIdade" class="erro"></div>
+    </div>
+
+    <div class="campo">
+      <label for="inputDataNascimento">Data de Nascimento: </label><br>
+      <input type="date" id="inputDataNascimento" />
+      <div id="erroDataNascimento" class="erro"></div>
+    </div>
+
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <div id="mensagemFinal" class="sucesso"></div>
+</body>
+</html>
